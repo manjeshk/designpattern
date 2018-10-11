@@ -1,4 +1,5 @@
 package com.manjeshk.designpattern.creational.factory;
 
-public class Page {
+public abstract class Page {
+    protected abstract void write();
 }

@@ -111,22 +111,24 @@ Java Design Pattern repository
     <li>Pitfalls
         <ul>
             <li>Complexity</li>
-            <li>Creation of subclass</li>
-            <li>Not to be refactoring, so generally needs to be designed in the begining</li>
+            <li>Runtime switch</li>
+            <li>Pattern within a pattern</li>
+            <li>Starts as a Factory</li>
         </ul>
     </li>
     <li>Contrast to Other Pattern</li>
 </ul>
 <table>
-    <tr><td>Singleton</td><td>Factory</td></tr>
-    <tr><td>Returns same instance i.e. One Constructor method - no args</td><td>Returns various instances i.e. Multiple constructors</td></tr>
-    <tr><td>No Interface</td><td>Instance Driven</td></tr>
-    <tr><td>No Subclasses</td><td>Subclasses</td></tr>
-    <tr><td></td><td>Easily adaptable</td></tr>
+    <tr><td>AbstractFactory</td><td>Factory</td></tr>
+    <tr><td>Implemented with Factory</td><td>Returns various instances i.e. Multiple constructors</td></tr>
+    <tr><td>Hides the factory</td><td>Instance Driven</td></tr>
+    <tr><td>Abstract environment</td><td>Subclasses</td></tr>
+    <tr><td>Built through composition</td><td>Easily adaptable</td></tr>
 </table>
 <h5>Summary</h5>
 <ul>
-  <li>Parameter Driven</li>
+  <li>Groups of similar factories</li>
   <li>Solves complex creation</li>
-  <li>Opposite of a Singleton</li> 
+  <li>Heavy abstraction</li>
+  <li>Framework pattern</li> 
 </ul>

@@ -3,7 +3,97 @@ Java Design Pattern repository
 
 <h2>Creational Design Pattern</h2>
 <h3>Singleton</h3>
+<ul>
+    <li>Only one instance created</li>
+    <li>Guarantees control of resources</li>
+    <li>Lazily loaded</li>
+    <li>Examples: Runtime, Logger, Spring Beans, Graphic Manager</li>
+    <li>Design Considerations
+        <ul>
+            <li>Class is responsible for lifecycle</li>
+            <li>Static in nature</li>
+            <li>Needs to be thread safe</li>
+            <li>Private instance</li>
+            <li>Private Constructor</li>
+            <li>no parameters required for construction</li>
+        </ul>
+    </li>
+    <li>Excercise
+        <ul>
+            <li>Create Singleton</li>
+            <li>Demonstrate only one instance created</li>
+            <li>Lazily Loaded</li>
+            <li>Thread safe</li>
+        </ul>
+    </li>
+    <li>Pitfalls
+        <ul>
+            <li>Often overused</li>
+            <li>Difficult to unit test</li>
+            <li>If not careful, not thread-safe</li>
+            <li>Sometimes confused with factory. If need to pass parameter to create instance method, it's not single while factory</li>
+            <li>java.util.Calendar in NOT Singleton, it's prototype</li>
+        </ul>
+    </li>
+    <li>Contrast to Other Pattern</li>
+</ul>
+<table>
+    <tr><td>Singleton</td><td>Factory</td></tr>
+    <tr><td>Returns the same instance as one constructor method with no-args</td><td>Returns various instances i.e. Multiple constructors</td></tr>
+    <tr><td>No Interface</td><td>Instance Driven</td></tr>
+    <tr><td></td><td>Easily adaptable</td></tr>
+</table>
+<h5>Summary</h5>
+<ul>
+  <li>Guarantee one instance</li>
+  <li>Easy to implement</li>
+  <li>Solves a well defined problem</li>
+</ul>
+
 <h3>Builder</h3>
+<ul>
+    <li>Handles complex constructors</li>
+    <li>Large number of parameters</li>
+    <li>Immutability</li>
+    <li>Examples: StringBuilder, DocumentBuilder, Locale.Builder</li>
+    <li>Design Considerations
+        <ul>
+            <li>Flexible over telescoping constructors</li>
+            <li>Static inner class</li>
+            <li>Calls appropriate constructor</li>
+            <li>Negates the need for exposed setters</li>
+        </ul>
+    </li>
+    <li>Excercise
+        <ul>
+            <li>Exposed Setters</li>
+            <li>Create Builder</li>
+        </ul>
+    </li>
+    <li>Pitfalls
+        <ul>
+            <li>Immutable</li>
+            <li>Inner static class</li>
+            <li>Designed first</li>
+            <li>Complexity</li>
+        </ul>
+    </li>
+    <li>Contrast to Other Pattern</li>
+</ul>
+<table>
+    <tr><td>Builder</td><td>Prototype</td></tr>
+    <tr><td>Handles complex constructors</td><td>Implemented around a clone</td></tr>
+    <tr><td>No Interface</td><td>Avoids calling complex construtors</td></tr>
+    <tr><td>Works with Legacy code</td><td>Difficult to implement in Legacy code</td></tr>
+</table>
+<h5>Summary</h5>
+<ul>
+  <li>Creative way to deal with complexity</li>
+  <li>Easy to implement</li>
+  <li>Can refactor in a separate class</li>
+</ul>
+
+
 <h3>Prototype</h3>
 <ul>
   <li>It is used when object creation is a constly affair and requires al lot of tine and resources and you have similar object already existing.</li>
@@ -101,11 +191,9 @@ Java Design Pattern repository
     </li>
     <li>Excercise
         <ul>
-            <li>Create pages</li>
-            <li>Create website</li>
-            <li>Create Concrete Classes</li>
-            <li>Create Factory</li>
-            <li>Enum</li> 
+            <li>AbstractFactory</li>
+            <li>Factory</li>
+            <li>Product</li>
         </ul>
     </li>
     <li>Pitfalls

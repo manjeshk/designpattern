@@ -1,8 +1,12 @@
 package com.manjeshk.designpattern.creational.singleton;
 
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 public class SingletonDemo {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
 
         System.out.println("--------------------------- Eager Loading ---------------------------");
         eagerLoading();
@@ -12,6 +16,9 @@ public class SingletonDemo {
 
         System.out.println("--------------------------- Thread Safe ---------------------------");
         threadSafe();
+
+        System.out.println("--------------------------- Database Connection ---------------------------");
+        databaseConnection();
 
     }
 
@@ -55,6 +62,19 @@ public class SingletonDemo {
 
         if (threadsafeObj1 == threadsafeObj2)
             System.out.println("Both are the same object.");
+    }
+
+
+    /**
+     * Database connection object creation testing
+     */
+    private static void databaseConnection() throws SQLException {
+        Connection connection = DatabaseConnection.getConnection();
+        System.out.println("connection = " + connection);
+
+        //Statement statement = connection.createStatement();
+        //TODO: perform database connection
+        //statement.close();
     }
 
 }

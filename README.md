@@ -220,3 +220,100 @@ Java Design Pattern repository
   <li>Heavy abstraction</li>
   <li>Framework pattern</li> 
 </ul>
+
+<h2>Structural Design Pattern</h2>
+<h3>Adapter</h3>
+<ul>
+    <li>Plug adapter</li>
+    <li>Convert interface to another interface</li>
+    <li>Legacy</li>
+    <li>Translate requests</li>
+    <li>Clinet, Adaptor, adaptee</li>
+    <li>Examples: Arrays -> List, Streams</li>
+    <li>Design Considerations
+        <ul>
+            <li>Client centric</li>
+            <li>Integrate new with old</li>
+            <li>Interface but not required</li>
+            <li>Concrete Classes</li>
+            <li>Adaptee can be the implementation</li>
+        </ul>
+    </li>
+    <li>Excercise
+        <ul>
+            <li>Create Adapter</li>
+            <li>Not to become Decorator</li>
+            <li>Another Adapter</li>
+        </ul>
+    </li>
+    <li>Pitfalls
+        <ul>
+            <li>Not complicated</li>
+            <li>Multiple Adapter</li>
+            <li>It doesn't addd functionality</li>
+        </ul>
+    </li>
+    <li>Contrast to Other Pattern</li>
+</ul>
+<table>
+    <tr><td>Adapter</td><td>Bridge</td></tr>
+    <tr><td>Works after code is designed</td><td>Designed upfront</td></tr>
+    <tr><td>Legacy</td><td>Abstraction and implementation vary</td></tr>
+    <tr><td>Retrofitted</td><td>Built in advance</td></tr>
+    <tr><td>Provides different interfaces</td><td>Both adapt multiple systems</td></tr>
+</table>
+<h5>Summary</h5>
+<ul>
+  <li>Simple solution</li>
+  <li>Easy to implement</li>
+  <li>Integrate with Legacy</li>
+  <li>Can provide multiple adapter</li> 
+</ul>
+
+<h3>Bridge</h3>
+<ul>
+    <li>Similar to adapter but difference is that it works with new code while adapter works with Legacy code</li>
+    <li>Decouple Abstraction and implemention</li>
+    <li>Encapsulation, Composition, Inheritance</li>
+    <li>Changes in abstraction won't affect client</li>
+    <li>Examples: Driver, JDBC Driver</li>
+    <li>Design Considerations
+        <ul>
+            <li>Uses interfaces and abstract classes</li>
+            <li>Composition over inheritance</li>
+            <li>More than composition</li>
+            <li>Expect change from both sides</li>
+        </ul>
+    </li>
+    <li>Excercise
+        <ul>
+            <li>Color and Shape</li>
+            <li>Color and Shape Bridge</li>
+            <li>Create Bridge</li>
+            <li>Another Bridge</li>
+        </ul>
+    </li>
+    <li>Pitfalls
+        <ul>
+            <li>Not complicated</li>
+            <li>Multiple Adapter</li>
+            <li>It doesn't addd functionality</li>
+        </ul>
+    </li>
+    <li>Contrast to Other Pattern</li>
+</ul>
+<table>
+    <tr><td>Adapter</td><td>Bridge</td></tr>
+    <tr><td>Works after code is designed</td><td>Designed upfront</td></tr>
+    <tr><td>Legacy</td><td>Abstraction and implementation vary</td></tr>
+    <tr><td>Retrofitted</td><td>Built in advance</td></tr>
+    <tr><td>Provides different interfaces</td><td>Both adapt multiple systems</td></tr>
+</table>
+<h5>Summary</h5>
+<ul>
+  <li>Simple solution</li>
+  <li>Easy to implement</li>
+  <li>Integrate with Legacy</li>
+
+asd  <li>Can provide multiple adapter</li> 
+</ul>
